@@ -1,4 +1,3 @@
 {
-  "ignoreTestFiles": ["*.md"],
-  "testFiles": "**/*.ts"
+  "ignoreTestFiles": "*.ts"
 }

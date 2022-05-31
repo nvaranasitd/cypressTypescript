@@ -1,17 +1,17 @@
 /// <reference types="cypress" />
 
-export class loginPage{
-  login() {
-		cy.log('created new user')
-		return cy.visit("https://tconnecttestgreen.apos.tandemdiabetes.com/login.aspx");
+class loginPage{
+  login(url) {
+		// cy.log('created new user');
+		return cy.visit(url);
 	}
 
-	fillEmailaddress(){
-		return cy.get('#txtLoginEmailAddress').type("sftestaccount001@tandem-diabetes.com");
+	fillEmailaddress(emailaddress: string){
+		return cy.get('#txtLoginEmailAddress').type(emailaddress);
 	}
 
-	fillPassword(){
-		return cy.get('#txtLoginPassword').type("tconnect");
+	fillPassword(password: string){
+		return cy.get('#txtLoginPassword').type(password);
 	}
 
 	signIn(){
@@ -21,3 +21,5 @@ export class loginPage{
 		return cy.get('#linkLogout').click();
 	}
 }
+
+export default loginPage
