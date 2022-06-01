@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:report": "node ./cypress/support/util/reports/multiple-cucumber-support.js && node ./cypress/support/util/reports/internal-report.js",
+    "cy:docker": "docker build -t cypress-test ."
   },
   "author": "Nandini Varanasi",
   "license": "ISC",
@@ -13,9 +14,16 @@
   },
   "dependencies": {
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.21.2",
     "typescript": "^4.7.2"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }

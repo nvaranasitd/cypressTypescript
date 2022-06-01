@@ -1,0 +1,83 @@
+[
+  {
+    "description": "    This feature validates the login functionality for the t:connect app",
+    "keyword": "Feature",
+    "name": "Login functionality",
+    "line": 2,
+    "id": "login-functionality",
+    "tags": [
+      {
+        "name": "@PRS:prs-id",
+        "line": 1
+      }
+    ],
+    "uri": "Login.feature",
+    "elements": [
+      {
+        "id": "login-functionality;user-shall-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "User shall login with valid credentials",
+        "tags": [
+          {
+            "name": "@PRS:prs-id",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "user is on t:Connect login page \"https://tconnecttestgreen.apos.tandemdiabetes.com/login.aspx\"",
+            "result": {
+              "status": "passed",
+              "duration": 2250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "user enters emailaddress as \"sftestaccount001@tandem-diabetes.com\"",
+            "result": {
+              "status": "passed",
+              "duration": 529000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "user enters password as \"tconnect\"",
+            "result": {
+              "status": "passed",
+              "duration": 260000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user clicks on sign In button",
+            "result": {
+              "status": "passed",
+              "duration": 3401000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the user signs out",
+            "result": {
+              "status": "passed",
+              "duration": 610000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
